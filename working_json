@@ -1,0 +1,791 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "buy bay",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "PetMatchIntent",
+                    "slots": [
+                        {
+                            "name": "pet",
+                            "type": "AMAZON.Animal"
+                        },
+                        {
+                            "name": "size",
+                            "type": "sizeType",
+                            "samples": [
+                                "{I_Want} {article} {size} {pet}",
+                                "{I_Want} {size}",
+                                "the {size}",
+                                "Something i can {size}",
+                                "{size} size",
+                                "{I_Want} {article} {size} {pet} that {energy}",
+                                "{I_Want} {article} {size} {temperament} {pet}",
+                                "{I_Want} {article} {size} {temperament} to {energy}",
+                                " {temperament} {pet}",
+                                "{energy} energy",
+                                "{size}"
+                            ]
+                        },
+                        {
+                            "name": "temperament",
+                            "type": "temperamentType",
+                            "samples": [
+                                "{temperament} {pet}"
+                            ]
+                        },
+                        {
+                            "name": "I_Want",
+                            "type": "IWantType"
+                        },
+                        {
+                            "name": "energy",
+                            "type": "energyType",
+                            "samples": [
+                                "{energy} energy",
+                                "{I_Want} to {energy}"
+                            ]
+                        },
+                        {
+                            "name": "article",
+                            "type": "articleType"
+                        },
+                        {
+                            "name": "at_the",
+                            "type": "atTheType"
+                        },
+                        {
+                            "name": "I_am_looking_for",
+                            "type": "IWantType"
+                        }
+                    ],
+                    "samples": [
+                        "{I_am_looking_for} {pet}",
+                        "{I_Want} {article} {pet}",
+                        "{I_Want} {article} {size} {temperament} dog",
+                        "find a pet",
+                        "match me",
+                        "{size} {pet}",
+                        "for a {pet}",
+                        "{I_Want} {article} {pet} that is {temperament} and {energy}",
+                        "{energy} {pet}",
+                        "{I_Want} {article} {energy} {pet}",
+                        "{I_Want} {article} {temperament} dog that is {energy} energy"
+                    ]
+                },
+                {
+                    "name": "BuyLaptopIntent",
+                    "slots": [
+                        {
+                            "name": "laptop",
+                            "type": "AMAZON.DeviceType"
+                        },
+                        {
+                            "name": "laptopsize",
+                            "type": "lsizeType",
+                            "samples": [
+                                "{I_Want} {laptopsize} {laptop}",
+                                "{I_Want} {article} {laptopsize} {laptop}",
+                                "{I_Want} {laptopsize}",
+                                "{laptop} should be {laptopsize}",
+                                "{laptopsize} size",
+                                "{I_Want} {laptopsize} {laptop}",
+                                "{I_Want} {article} {laptopsize} {laptop}"
+                            ]
+                        },
+                        {
+                            "name": "laptopram",
+                            "type": "ram",
+                            "samples": [
+                                "{I_Want} {laptopram}",
+                                "{laptopram} size",
+                                "{I_Want} {laptopram} configuration",
+                                "{laptopram} octaprocessor"
+                            ]
+                        },
+                        {
+                            "name": "laptopbrand",
+                            "type": "brand",
+                            "samples": [
+                                "{laptopbrand} {laptop}"
+                            ]
+                        },
+                        {
+                            "name": "I_Want",
+                            "type": "IWantType"
+                        },
+                        {
+                            "name": "article",
+                            "type": "articleType"
+                        },
+                        {
+                            "name": "at_the",
+                            "type": "atTheType"
+                        },
+                        {
+                            "name": "I_am_looking_for",
+                            "type": "IWantType"
+                        }
+                    ],
+                    "samples": [
+                        "{laptop}",
+                        "{I_am_looking_for} {laptop}",
+                        "{I_Want} {article} {laptop}",
+                        "{I_Want} {article} {laptopsize} {laptopram} {laptop}",
+                        "find a laptop",
+                        "match my requirements",
+                        "{laptopsize} {laptop}",
+                        "for a {laptop}",
+                        "{I_Want} {article} {laptop} that is {laptopbrand} and {laptopram}",
+                        "{laptopram} {laptop}",
+                        "{I_Want} {article} {laptopram} {laptop}",
+                        "{I_Want} {article} {laptopbrand} laptop that is {laptopram} configuration"
+                    ]
+                },
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                }
+            ],
+            "types": [
+                {
+                    "name": "articleType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "a"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "an"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "the"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "of"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "with"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "having"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "atTheType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "at the"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "on the"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "around the"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "in the"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "lsizeType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "small",
+                                "synonyms": [
+                                    "tiny one",
+                                    "carry without a problem",
+                                    "weightless",
+                                    "carry in a small bag",
+                                    "size of 9 inches"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "medium",
+                                "synonyms": [
+                                    "slightly bigger",
+                                    "does not require a tablet",
+                                    "occasionally gaming",
+                                    "larger keys",
+                                    "size of 12 inches",
+                                    "size of 14 inches"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "large",
+                                "synonyms": [
+                                    "wide screen",
+                                    "play station",
+                                    "easily viewable by elders",
+                                    "watching movies",
+                                    "problems with my vision",
+                                    "size of 15 or more"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "brand",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "HP",
+                                "synonyms": [
+                                    "Hewlett Packard"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Dell"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Apple",
+                                "synonyms": [
+                                    "Macintosh",
+                                    "Macbook",
+                                    "Macbook Pro"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Microsoft",
+                                "synonyms": [
+                                    "MS",
+                                    "Surface",
+                                    "Surface Pro"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "ram",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "low",
+                                "synonyms": [
+                                    "Core 1.5",
+                                    "small configuration",
+                                    "start size",
+                                    "speed not a constraint",
+                                    "domestic use",
+                                    "home purpose",
+                                    "low cost",
+                                    "mostly browsing"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "medium",
+                                "synonyms": [
+                                    "Core 2",
+                                    "professional use",
+                                    "optimal speed",
+                                    "good speed",
+                                    "office purpose",
+                                    "watching movies",
+                                    "watch streaming platforms",
+                                    "application development"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "high",
+                                "synonyms": [
+                                    "faster like a bullet",
+                                    "gaming",
+                                    "play station",
+                                    "heavy applications hosting",
+                                    "hosting a database",
+                                    "use as a server",
+                                    "dedicated graphic card"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "energyType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "low",
+                                "synonyms": [
+                                    "low energy",
+                                    "to cuddle with",
+                                    "to watch netflix with",
+                                    "lazy"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "medium",
+                                "synonyms": [
+                                    "medium energy",
+                                    "for my apartment",
+                                    "fun to play with",
+                                    "tug of war",
+                                    "plays tug of war"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "high",
+                                "synonyms": [
+                                    "that I can run with",
+                                    "play frisbee",
+                                    "run",
+                                    "hike",
+                                    "go hiking",
+                                    "play fetch",
+                                    "energetic",
+                                    "high energy"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "IWantType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "my favorite is"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "I prefer"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "let's find"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "we like"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "we would like"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "how about"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "I want"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "I like"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "sizeType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "large",
+                                "synonyms": [
+                                    "large size",
+                                    "huge",
+                                    "truck",
+                                    "gigantic",
+                                    "eat me out of house",
+                                    "scary big",
+                                    "ginormous",
+                                    "ride",
+                                    "waist height"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "medium",
+                                "synonyms": [
+                                    "medium size",
+                                    "bigger than a cat",
+                                    "on the bed",
+                                    "up to my knees",
+                                    "average"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "small",
+                                "synonyms": [
+                                    "small size",
+                                    "little",
+                                    "take on an airplane"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "tiny",
+                                "synonyms": [
+                                    "tiny size",
+                                    "cheap to feed",
+                                    "teacup",
+                                    "pocket",
+                                    "yippy",
+                                    "carry in my purse",
+                                    "put in my pocket",
+                                    "itty bitty"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "temperamentType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "watch",
+                                "synonyms": [
+                                    "adult",
+                                    "barks at people"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "guard",
+                                "synonyms": [
+                                    "to protect me",
+                                    "protective"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "family",
+                                "synonyms": [
+                                    "hang out",
+                                    "hang out with kids",
+                                    "is kid friendly",
+                                    "good with kids",
+                                    "family friends",
+                                    "gentle with kids"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "AMAZON.Animal",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "mythical_creatures",
+                                "synonyms": [
+                                    "unicorn",
+                                    "chimera",
+                                    "dragon"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "AMAZON.DeviceType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "device_types",
+                                "synonyms": [
+                                    "laptop",
+                                    "TV",
+                                    "stereo"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "PetMatchIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "pet",
+                            "type": "AMAZON.Animal",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "size",
+                            "type": "sizeType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Intent-PetMatchIntent.IntentSlot-size"
+                            }
+                        },
+                        {
+                            "name": "temperament",
+                            "type": "temperamentType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Intent-PetMatchIntent.IntentSlot-temperament"
+                            }
+                        },
+                        {
+                            "name": "I_Want",
+                            "type": "IWantType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "energy",
+                            "type": "energyType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Intent-PetMatchIntent.IntentSlot-energy"
+                            }
+                        },
+                        {
+                            "name": "article",
+                            "type": "articleType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "at_the",
+                            "type": "atTheType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "I_am_looking_for",
+                            "type": "IWantType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        }
+                    ]
+                },
+                {
+                    "name": "BuyLaptopIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "laptop",
+                            "type": "AMAZON.DeviceType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "laptopsize",
+                            "type": "lsizeType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Intent-BuyLaptopIntent.IntentSlot-laptopsize"
+                            }
+                        },
+                        {
+                            "name": "laptopbrand",
+                            "type": "brand",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Intent-BuyLaptopIntent.IntentSlot-laptopbrand"
+                            }
+                        },
+                        {
+                            "name": "I_Want",
+                            "type": "IWantType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "laptopram",
+                            "type": "ram",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Intent-BuyLaptopIntent.IntentSlot-laptopram"
+                            }
+                        },
+                        {
+                            "name": "article",
+                            "type": "articleType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "at_the",
+                            "type": "atTheType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "I_am_looking_for",
+                            "type": "IWantType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        }
+                    ]
+                }
+            ],
+            "delegationStrategy": "SKILL_RESPONSE"
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Intent-PetMatchIntent.IntentSlot-size",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "There are dogs that are tiny, small, medium, and large. Which would you like?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "What size of a dog would you like?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Intent-PetMatchIntent.IntentSlot-temperament",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Are you looking for more of a family dog or a guard dog?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Would you prefer a dog to hang out with kids or to protect you?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Intent-PetMatchIntent.IntentSlot-energy",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Do you prefer high energy or low energy dogs?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Intent-BuyLaptopIntent.IntentSlot-laptopsize",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "There are laptops that are small, medium, and large. Which would you like?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Which size of laptop would you like?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Intent-BuyLaptopIntent.IntentSlot-laptopbrand",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Which brand are you looking for?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "What kind of configuration are you looking for?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Intent-BuyLaptopIntent.IntentSlot-laptopram",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Do you prefer high speed or low speed machine?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "What is the general purpose of the machine you are looking for?"
+                    }
+                ]
+            }
+        ]
+    }
+}
